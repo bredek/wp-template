@@ -14,8 +14,20 @@
   <h1><a class='current' href="<?php bloginfo('url');?>"><?php bloginfo('name');?></a></h1>
   <a href="" class="nav-toggle"><span></span>Menu</a>
   <nav>
-    <h1 class="open"><a class='current' href="index.html">G</a></h1>
-    <ul class="no-bullet">
+    <h1 class="open"><a class='current' href="<?php bloginfo('url');?>"><?php bloginfo('name');?></a></h1>
+    
+    <?php 
+    
+    $defaults = array(
+      'container' => false,
+      'theme_location' => 'primary-menu',
+      'menu_class' => 'no-bullet'
+    );
+
+    wp_nav_menu( $defaults );
+    ?>
+
+    <!--<ul class="no-bullet">
       <li class="current parent"><a class='current' href="index.html">Portfolio</a>
         <ul class="sub-menu">
           <li><a href="item.html">Portfolio Item</a></li>
@@ -32,6 +44,18 @@
       </li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
-    </ul>
+    </ul>-->
   </nav>
+
+  <?php 
+  
+      $defaults2 = array(
+      'container' => false,
+      'theme_location' => 'secondary-menu',
+      'menu_class' => 'no-bullet'
+    );
+
+    wp_nav_menu( $defaults2 );
+    
+    ?>
 </header>
