@@ -2,12 +2,19 @@
 // enable creating of custom menus
 add_theme_support( 'menus' );
 add_theme_support( 'post-thumbnails' );
+
+// overriding the default length of excerpt
+function wpt_excerpt_length( $length ) {
+	return 16;
+}
+add_filter( 'excerpt_length', 'wpt_excerpt_length', 999 );
+
 function register_theme_menus(){
 
 	register_nav_menus(
 		array(
-			'primary-menu' => __('Primary Menu'),
-			'secondary-menu' => __('Secondary Menu'),
+			'primary-menu' => __('Primary Menu')
+			// 'secondary-menu' => __('Secondary Menu'),
 		)
 	);
 
