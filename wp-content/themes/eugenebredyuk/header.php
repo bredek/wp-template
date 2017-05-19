@@ -49,13 +49,13 @@
 
   <?php 
   
-      $defaults2 = array(
-      'container' => false,
-      'theme_location' => 'secondary-menu',
-      'menu_class' => 'no-bullet'
-    );
+    //   $defaults2 = array(
+    //   'container' => false,
+    //   'theme_location' => 'secondary-menu',
+    //   'menu_class' => 'no-bullet'
+    // );
 
-    wp_nav_menu( $defaults2 );
+    // wp_nav_menu( $defaults2 );
     
     ?>
 </header>
